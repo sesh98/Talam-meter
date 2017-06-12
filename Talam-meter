@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Talam</title>
+</head>
+<body style="background: turquoise">
+<button style="padding: 10px;text-align: center;font-size: 100%;color:black;background:red;display: inline-block;" onclick="Start()">Start</button>
+<p id="demo"></p>
+<br><br><br><br><br>
+<img src="http://cdn.xl.thumbs.canstockphoto.com/canstock37387868.jpg" id="myPic">
+</body>
+<script type="text/javascript">
+	var time=3;
+	function Time(){
+		if(!time){
+			time=3;
+		}
+			document.getElementById('demo').innerHTML=time;
+			Pic();				
+			time--;
+	}
+	function Pic(){
+		if(time==3){
+			document.getElementById("myPic").src="http://cdn.xl.thumbs.canstockphoto.com/canstock37387868.jpg";//palm-down.jpg
+		}
+		if(time==2){
+			document.getElementById("myPic").src="http://cdn.xl.thumbs.canstockphoto.com/canstock17855772.jpg";//palm-mid.jpg
+			
+		}
+		if(time==1){
+			document.getElementById("myPic").src="https://t3.ftcdn.net/jpg/01/07/05/00/240_F_107050052_FnvpAfuEE7CVb0oUEkdKp9r5YRPsG09M.jpg";//palm-up.jpg
+		}
+		
+	}
+	function Timer(){
+		Time();
+	}
+	function Start(){
+		setInterval(Timer,650);
+	}
+</script>
+</html>
